@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(194, 247, 229);
+    font-family:'Poppins' ,Helvetica, sans-serif;
+}
+.container
+{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 25px;
+    margin: 85px auto;
+    box-shadow: 0 5px 10px rgba(139, 147, 144, 0.2);
+}
+.container .input-field{
+    position: relative;
+    height: 65px;
+    width: 100%;
+}
+.input-field textarea{
+    height: 100%;
+    width: 100%;
+    outline:none;
+    border:2px solid #ccc;
+    border-radius: 8px;
+    padding:20px;
+    resize: none;
+    font-size: 18px;
+}
+.input-field textarea:focus{
+    border-color: #4070f4;
+}
+.input-field textarea:focus~ .note-icon
+{
+    color:#4070f4;
+}
+textarea::-webkit-scrollbar
+{
+    display: none;
+}
+.input-field .note-icon
+{
+    position:absolute;
+    top:50%;
+    right:18px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    pointer-events: none;
+    color:#707070;
+}
+.container .todo-list
+{
+    /* margin-top: 20px; */
+    max-height: 380px;
+    overflow-y: auto;
+}
+.todo-list .list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #e6eee4e7;
+    padding: 20px 20px;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.todo-list .list input{
+    height: 16px;
+    min-width:16px;
+    pointer-events: none;
+    accent-color:#f5112b;
+}
+.list input:checked ~ .task
+{
+    text-decoration: line-through;
+}
+.todo-list .list .task{
+    margin: 0px 30px 0 15px;
+    font-size: 18px;
+    font-weight:550;
+    word-break: break-all;
+}
+.todo-list .list i{
+    position:absolute;
+    top:50%;
+    right:18px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color:#707070;
+    opacity: 0.5;
+    display:none;
+}
+.todo-list .list:hover i{
+    display: inline-flex;
+}
+.todo-list .list i:hover
+{
+    opacity:1;
+}
+.container .pending-task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:25px;
+}
+.pending-task span{
+    color:#333;
+    font-size:18px;
+    font-weight: 400;
+}
+.pending-task .pending-num
+{
+   color:red;
+   font-weight: bolder;
+}
+.pending-task .clear-btn{
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background-color: #4070f4;
+    color:#fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
